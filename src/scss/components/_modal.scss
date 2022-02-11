@@ -15,6 +15,8 @@
     background: $light;
     padding: 2rem;
     color: $dark;
+    overflow: auto;
+    max-height: 80%;
   }
 }
 
