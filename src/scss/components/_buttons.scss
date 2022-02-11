@@ -1,0 +1,49 @@
+.btn {
+  padding: .7rem 1.5rem;
+  background: $accent;
+  color: $text;
+  text-align: center;
+  cursor: pointer;
+}
+
+.toggle {
+  position: fixed;
+  top: 2.5rem;
+  left: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  z-index: 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: .4rem;
+    left: .2rem;
+    width: 1.1rem;
+    height: .2rem;
+    background: $dark;
+    transition: transform .3s;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: .4rem;
+    left: .2rem;
+    width: 1.1rem;
+    height: .2rem;
+    background: $dark;
+    transition: .3s;
+  }
+}
+
+.active.toggle {
+  &::before {
+    transform: rotate(45deg) translateY(.35rem);
+    left: .45rem;
+  }
+  &::after {
+    transform: rotate(135deg) translateY(.35rem);
+    left: .45rem;
+  }
+}
