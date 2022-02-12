@@ -27,3 +27,13 @@ for (let i = 0; i < items.length; i++) {
     toggle.style.display = "block";
   })
 }
+
+const sr = ScrollReveal({
+  distance: '60px',
+  duration: 2000,
+  delay: 100,
+  // reset: true
+})
+
+sr.reveal('.main__content, .social', {origin: 'right', interval: 500})
+sr.reveal('.clip', {origin: 'left', delay: 500})

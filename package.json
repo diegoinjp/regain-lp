@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "deploy": "rm -rf dist/ && npm build && gh-pages -d dist"
   },
+  "homepage": "https://github.com/diegoinjp/regain-lp",
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -67,6 +67,14 @@ button {
   background: #545454;
 }
 
+::-moz-selection {
+  background-color: rgba(255, 0, 106, 0.5);
+}
+
+::selection {
+  background-color: rgba(255, 0, 106, 0.5);
+}
+
 .section {
   padding: 4.5rem 0 4rem;
 }
@@ -90,7 +98,7 @@ button {
 
 .btn {
   padding: 0.7rem 1.5rem;
-  background: #ff0095;
+  background: #ff006a;
   color: #ffebeb;
   text-align: center;
   cursor: pointer;
@@ -195,11 +203,26 @@ button {
   width: 40%;
 }
 .main__content .btn:hover {
-  background: #ff33aa;
+  background: #ff3388;
 }
 .main__title {
   font-size: 5rem;
   font-family: "Josefin Sans", sans-serif;
+  position: relative;
+}
+.main__title::after {
+  content: "";
+  position: absolute;
+  top: -1.6rem;
+  left: 14.1rem;
+  height: 0.9rem;
+  width: 0.9rem;
+  border-radius: 50%;
+  background: #ffebeb;
+  animation: move 0.5s alternate infinite ease;
+}
+.main__title::first-letter {
+  color: #ff006a;
 }
 .main__description {
   font-size: 1.3rem;
@@ -214,6 +237,9 @@ button {
 }
 .social a {
   color: white;
+}
+.social a:hover {
+  color: #ff3388;
 }
 .social-icon {
   font-size: 1.5rem;
@@ -302,7 +328,7 @@ button {
   right: 2rem;
   height: 0.2rem;
   width: 50%;
-  background: #ff0095;
+  background: #ff006a;
 }
 .modal .content__title {
   font-size: 2rem;
@@ -315,6 +341,7 @@ button {
 .close {
   position: absolute;
   font-size: 4rem;
+  color: #ff006a;
   text-shadow: 1px 1px 10px #000;
   top: 0.5rem;
   right: 1.5rem;
@@ -403,6 +430,14 @@ button {
     z-index: 0;
   }
 }
+@keyframes move {
+  from {
+    top: -1.6rem;
+  }
+  to {
+    top: -2.7rem;
+  }
+}
 @media screen and (max-width: 650px) {
   .main {
     padding-top: 100%;
@@ -425,11 +460,14 @@ button {
   .main__sub {
     font-size: 1rem;
   }
+  .main__description {
+    font-size: 1.2rem;
+  }
   .main__title {
     font-size: 4rem;
   }
-  .main__description {
-    font-size: 1.2rem;
+  .main__title::after {
+    left: 11.2rem;
   }
 
   .social {

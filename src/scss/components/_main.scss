@@ -45,6 +45,23 @@
   &__title {
     font-size: 5rem;
     font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -1.6rem;
+      left: 14.1rem;
+      height: .9rem;
+      width: .9rem;
+      border-radius: 50%;
+      background: $text;
+      animation: move .5s alternate infinite ease;
+    }
+
+    &::first-letter {
+      color: $accent;
+    }
   }
   &__description {
     font-size: 1.3rem;
@@ -60,6 +77,10 @@
 
   & a {
     color: white;
+
+    &:hover {
+      color: $accent2;
+    }
   }
 
   &-icon { 

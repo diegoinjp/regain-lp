@@ -61,6 +61,8 @@ button {
       background: hsl(0, 0%, 33%);
     }
   }
-
 }
+
+::-moz-selection { background-color: hsla(335, 100%, 50%, .5)}
+::selection { background-color: hsla(335, 100%, 50%, .5)}
 
