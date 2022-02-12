@@ -42,3 +42,25 @@ button {
   &-3 { padding: 3rem ; }
   &-4 { padding: 4rem ; }
 }
+
+::-webkit-scrollbar {
+  width: .5rem;
+
+  &-track {
+    background-color: $light;
+    -webkit-border-radius: .5rem;
+    border-radius: .5rem;
+  }
+
+  &-thumb {
+    -webkit-border-radius: .2rem;
+    border-radius: .2rem;
+    background: hsl(0, 0%, 43%); 
+
+    &:hover {
+      background: hsl(0, 0%, 33%);
+    }
+  }
+
+}
+

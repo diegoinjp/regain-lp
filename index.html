@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>REGAIN</title>
   <link rel="stylesheet" href="src/scss/style.scss">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <button class="toggle"></button>
+  <div class="tooltip">Click here</div>
   <section class="menu">
     <a href="#" class="menu__item">About</a>
     <a href="#" class="menu__item">Cast</a>
@@ -17,7 +19,8 @@
 
     <div class="modal">
       <div class="content">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione molestias rerum doloribus, laboriosam, excepturi blanditiis assumenda alias quisquam minus impedit sunt at dolores saepe debitis voluptate iusto laudantium. Aliquid, sequi?</p>
+        <h1 class="content__title">About</h1>
+        <p>学生4人によって結成された映画製作団体「ST.Moonlight」の記念すべき第一作目いよいよ公開!! 彼女も友達も失った青年が、師匠との奇妙な関係を通して成長し、失くしたものを再び取り戻す物語</p>
       </div>
       <span class="close">&times;</span>
     </div>
@@ -52,21 +55,23 @@
           <h3 class="cast-actor">高山聡</h3>
         </div>
         <div class="cast">
-          <h1 class="cast-char">ゆり、かえで、さくら</h1>
-          <h3 class="cast-actor"></h3>
+          <h1 class="cast-char">ゆり、<br>かえで、<br>さくら</h1>
+          <h3 class="cast-actor">佐々木咲弥<br>植田茉莉花<br>喜田よつ葉</h3>
         </div>
       </div>
       <span class="close">&times;</span>
     </div>
     <div class="modal">
       <div class="content">
+        <h1 class="content__title">Staff</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione molestias rerum doloribus, laboriosam, excepturi blanditiis assumenda alias quisquam minus impedit sunt at dolores saepe debitis voluptate iusto laudantium. Aliquid, sequi?</p>
       </div>
       <span class="close">&times;</span>
     </div>
     <div class="modal">
       <div class="content">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione molestias rerum doloribus, laboriosam, excepturi blanditiis assumenda alias quisquam minus impedit sunt at dolores saepe debitis voluptate iusto laudantium. Aliquid, sequi?</p>
+        <h1 class="content__title">Contact</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione molestias rerum doloribus, laboriosam, excepturi blanditiis assumenda alias quisquam minus impedit sunt at dolores saepe debitis voluptate iusto laudantium. Aliquid, sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolores, eos exercitationem eum quo cupiditate facere corrupti, esse, provident tenetur nemo! Nostrum, ad provident amet commodi tenetur dolores dolore quisquam eligendi sed, dolor sunt ratione pariatur voluptate aliquam cum libero, cupiditate porro ipsam perspiciatis. Libero quidem, dicta tempore fuga eum qui repellendus natus illo, excepturi minus, quia sit voluptatum aliquid totam. Ratione officia ullam consequuntur obcaecati eius, molestias vel enim sint, modi asperiores sunt consequatur distinctio at dolore cumque. Aliquid exercitationem, inventore sunt veritatis alias hic accusamus eligendi iste culpa reiciendis ratione sed fuga delectus at provident quod. Quidem, est!</p>
       </div>
       <span class="close">&times;</span>
     </div>
@@ -76,8 +81,19 @@
     <div class="main__content">
       <h3 class="main__sub">ST Moonlight</h3>
       <h1 class="main__title">REGAIN</h1>
-      <p class="main__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sequi maxime quia consectetur doloremque, deserunt iusto repellat reiciendis dignissimos illum vitae nesciunt id dolorum non. Magni quia odio eaque minima.</p>
+      <p class="main__description">彼女も友達も失った青年が、師匠との奇妙な関係を通して成長し、失くしたものを再び取り戻す物語</p>
+      <p>監督: Diego Vallejo<br>脚本: 野田祐介</p>
       <a href="https://www.youtube.com/watch?v=WYBYF4gMoRk&t=2127s" class="btn" target="_blank"><i class='bx bx-play-circle'></i>Watch Now</a>
+    </div>
+
+    <div class="clip">
+      <iframe class="clip-box" width="320" height="215" src="https://www.youtube.com/embed/nr1xBnM3H4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+    </div>
+
+    <div class="social">
+      <a href="https://twitter.com/STMoonlight3" target="_blank"><i class='bx bxl-twitter social-icon'></i></a>
+      <a href="https://t.co/Nb0OsT61QS" target="_blank"><i class='bx bxl-instagram social-icon' ></i></a>
+      <a href="https://www.youtube.com/channel/UCeCawv2pH-mKHkOrWaLBAjA" target="_blank"><i class='bx bxl-youtube social-icon'></i></a>
     </div>
   </main>
 

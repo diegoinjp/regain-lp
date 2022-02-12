@@ -10,13 +10,32 @@
   align-items: center;
 
   & .content {
+    position: relative;
     width: 90%;
     max-width: 30rem;
     background: $light;
-    padding: 2rem;
+    padding: 4rem 2rem 2rem;
     color: $dark;
     overflow: auto;
-    max-height: 80%;
+    max-height: 70%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 1.8rem;
+      right: 2rem;
+      height: .2rem;
+      width: 50%;
+      background: $accent;
+    }
+
+    &__title { 
+      font-size: 2rem;
+      text-transform: uppercase;
+      position: absolute;
+      left: 2rem;
+      top: .5rem;
+    }
   }
 }
 

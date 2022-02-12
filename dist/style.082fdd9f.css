@@ -50,6 +50,23 @@ button {
   padding: 4rem;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #ffebeb;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  background: #6e6e6e;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #545454;
+}
+
 .section {
   padding: 4.5rem 0 4rem;
 }
@@ -118,6 +135,29 @@ button {
   left: 0.45rem;
 }
 
+.tooltip {
+  padding: 0.1rem 0.7rem;
+  position: fixed;
+  top: 2.4rem;
+  left: 5.3rem;
+  background: #ffebeb;
+  font-size: 0.9rem;
+  opacity: 0;
+  z-index: 2;
+  color: #171717;
+  border-radius: 0.5rem;
+  animation: appear 3s;
+}
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: 0.15rem;
+  left: -0.7rem;
+  border-style: solid;
+  border-width: 0.55rem 1rem 0.55rem 0;
+  border-color: transparent #ffebeb transparent transparent;
+}
+
 .main {
   position: fixed;
   top: 0;
@@ -131,14 +171,15 @@ button {
 }
 .main::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(90deg, #0d0d0d 30%, rgba(0, 0, 0, 0) 60%);
+  background: linear-gradient(90deg, #0d0d0d 30%, rgba(0, 0, 0, 0) 50%);
 }
 .main__content {
+  position: relative;
   z-index: 1;
   width: 50%;
   display: flex;
@@ -147,7 +188,7 @@ button {
   margin-left: 2.5rem;
 }
 .main__content h1, .main__content h3, .main__content p {
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 1px 1px 10px #000;
 }
 .main__content .btn {
   min-width: 10rem;
@@ -159,6 +200,37 @@ button {
 .main__title {
   font-size: 5rem;
   font-family: "Josefin Sans", sans-serif;
+}
+.main__description {
+  font-size: 1.3rem;
+}
+
+.social {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+}
+.social a {
+  color: white;
+}
+.social-icon {
+  font-size: 1.5rem;
+}
+
+.clip {
+  z-index: 2;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+}
+.clip-box {
+  border: 0.3rem solid #ffebeb;
+  opacity: 0.7;
+}
+.clip-box:hover {
+  opacity: 1;
 }
 
 .menu {
@@ -214,19 +286,36 @@ button {
   align-items: center;
 }
 .modal .content {
+  position: relative;
   width: 90%;
   max-width: 30rem;
   background: #ffebeb;
-  padding: 2rem;
+  padding: 4rem 2rem 2rem;
   color: #171717;
   overflow: auto;
-  max-height: 80%;
+  max-height: 70%;
+}
+.modal .content::before {
+  content: "";
+  position: absolute;
+  top: 1.8rem;
+  right: 2rem;
+  height: 0.2rem;
+  width: 50%;
+  background: #ff0095;
+}
+.modal .content__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 2rem;
+  top: 0.5rem;
 }
 
 .close {
   position: absolute;
   font-size: 4rem;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 1px 1px 10px #000;
   top: 0.5rem;
   right: 1.5rem;
   z-index: 10;
@@ -247,9 +336,11 @@ button {
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  filter: grayscale(90%);
 }
 .gallery .cast:hover {
   flex: 7;
+  filter: none;
 }
 .gallery .cast:nth-child(1) {
   background: #0d0d0d center/cover no-repeat url(/img-01.839e6ea5.jpg);
@@ -274,9 +365,13 @@ button {
 }
 .gallery .cast:nth-child(8) {
   background: #0d0d0d center/cover no-repeat url(/img-08.cb61556c.jpg);
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0 2rem;
 }
 .gallery .cast-char, .gallery .cast-actor {
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 1px 1px 10px #000;
   opacity: 0;
   transition: opacity 0.7s;
 }
@@ -290,16 +385,67 @@ button {
   opacity: 1;
 }
 
-@media screen and (max-width: 600px) {
+@keyframes appear {
+  0% {
+    opacity: 0;
+    z-index: 0;
+  }
+  20% {
+    opacity: 1;
+    z-index: 2;
+  }
+  80% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@media screen and (max-width: 650px) {
   .main {
-    align-items: end;
-    padding-bottom: 2rem;
+    padding-top: 100%;
+    flex-direction: column;
+    align-items: left;
+    overflow: auto;
   }
   .main::before {
     bottom: 0;
     width: 100%;
     height: 100vh;
     background: linear-gradient(0deg, #0d0d0d 20%, rgba(0, 0, 0, 0) 60%);
+  }
+  .main__content {
+    width: 85%;
+    gap: 1rem;
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+  .main__sub {
+    font-size: 1rem;
+  }
+  .main__title {
+    font-size: 4rem;
+  }
+  .main__description {
+    font-size: 1.2rem;
+  }
+
+  .social {
+    position: relative;
+    bottom: auto;
+    left: initial;
+    margin: 1rem 0;
+  }
+
+  .clip {
+    position: relative;
+    bottom: auto;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
+    height: 70%;
+    width: 70%;
   }
 
   .gallery {
@@ -308,12 +454,25 @@ button {
   .gallery .cast {
     height: 10%;
     padding-bottom: 0;
-    padding-left: 1rem;
+    padding: 0 1rem;
     justify-content: center;
     align-items: start;
   }
   .gallery .cast:hover {
     flex: 3;
+  }
+  .gallery .cast:nth-child(2), .gallery .cast:nth-child(3), .gallery .cast:nth-child(7) {
+    align-items: end;
+  }
+  .gallery .cast-char {
+    font-size: 1.8rem;
+  }
+  .gallery .cast-actor {
+    font-size: 1.1rem;
+  }
+
+  .modal .content::before {
+    width: 30%;
   }
 }
 

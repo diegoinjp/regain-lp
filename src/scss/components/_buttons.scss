@@ -47,3 +47,27 @@
     left: .45rem;
   }
 }
+
+.tooltip {
+  padding: .1rem .7rem;
+  position: fixed;
+  top: 2.4rem;
+  left: 5.3rem;
+  background: $light;
+  font-size: .9rem;
+  opacity: 0;
+  z-index: 2;
+  color: $dark;
+  border-radius: .5rem;
+  animation: appear 3s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: .15rem;
+    left: -.7rem;
+    border-style: solid;
+    border-width: .55rem 1rem .55rem 0;
+    border-color: transparent $light transparent transparent;
+  }
+}

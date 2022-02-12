@@ -1,0 +1,6 @@
+@keyframes appear {
+  0% { opacity: 0; z-index: 0; }
+  20% { opacity: 1; z-index: 2; }
+  80% { opacity: 1; z-index: 2; }
+  100% { opacity: 0; z-index: 0; }
+}

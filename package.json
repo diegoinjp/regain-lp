@@ -11,7 +11,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "boxicons": "^2.1.1",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.49.7"
   }
