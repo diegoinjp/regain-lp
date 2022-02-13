@@ -2,11 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: start;
   align-items: center;
+  overflow: auto;
   background: $background right / cover no-repeat url(./../../img/imgb-02.jpg);
 
   &::before {
@@ -56,7 +57,10 @@
       width: .9rem;
       border-radius: 50%;
       background: $text;
-      animation: move .5s alternate infinite ease;
+      box-shadow: $textShadow;
+      animation: move .5s alternate infinite ease 2s;
+      -webkit-animation: move .5s alternate infinite ease 2s;
+      -moz-animation: move .5s alternate infinite ease 2s;
     }
 
     &::first-letter {
@@ -103,4 +107,11 @@
     }
 
   }
+}
+
+.filter {
+  backdrop-filter: blur(13px) saturate(169%);
+  -webkit-backdrop-filter: blur(13px) saturate(169%);
+  background-color: rgba(255, 255, 255, 0.47);
+  border-radius: 12px;
 }

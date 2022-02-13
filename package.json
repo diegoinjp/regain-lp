@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html",
-    "deploy": "rm -rf dist/ && npm build && gh-pages -d dist"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url .",
+    "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://github.com/diegoinjp/regain-lp",
+  "homepage": "https://diegoinjp.github.io/regain-lp",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
     "sass": "^1.49.7"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

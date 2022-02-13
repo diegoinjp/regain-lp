@@ -1,10 +1,12 @@
-import 'boxicons'
+import './../scss/style.scss'
 
 let toggle = document.querySelector('.toggle'),
     menu = document.querySelector('.menu'),
     items = document.querySelectorAll('.menu__item'),
     modal = document.querySelectorAll('.modal'),
-    close = document.querySelectorAll('.close');
+    close = document.querySelectorAll('.close'),
+    mainW = document.querySelector('.main'),
+    mainScreen = document.querySelector('.main__content');
 
 toggle.addEventListener('click', () => {
   menu.classList.toggle('show')
@@ -28,12 +30,19 @@ for (let i = 0; i < items.length; i++) {
   })
 }
 
+// SCROLL 
+
+function scrollUp(){
+  if(this.scrollY >= 30) mainScreen.classList.add('filter'); else mainScreen.classList.remove('filter')
+}
+mainW.addEventListener('scroll', scrollUp)
+
 const sr = ScrollReveal({
   distance: '60px',
   duration: 2000,
   delay: 100,
+  mobile: false
   // reset: true
 })
 
-sr.reveal('.main__content, .social', {origin: 'right', interval: 500})
-sr.reveal('.clip', {origin: 'left', delay: 500})
+sr.reveal('.main__content', {origin: 'right'})

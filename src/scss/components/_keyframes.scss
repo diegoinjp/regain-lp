@@ -1,4 +1,16 @@
-@keyframes appear {
+@keyframes blink {
+  0% { opacity: 0; z-index: 0; }
+  20% { opacity: 1; z-index: 2; }
+  80% { opacity: 1; z-index: 2; }
+  100% { opacity: 0; z-index: 0; }
+}
+@-webkit-keyframes blink {
+  0% { opacity: 0; z-index: 0; }
+  20% { opacity: 1; z-index: 2; }
+  80% { opacity: 1; z-index: 2; }
+  100% { opacity: 0; z-index: 0; }
+}
+@-moz-keyframes blink {
   0% { opacity: 0; z-index: 0; }
   20% { opacity: 1; z-index: 2; }
   80% { opacity: 1; z-index: 2; }
@@ -6,6 +18,14 @@
 }
 
 @keyframes move {
+  from { top: -1.6rem ;}
+  to { top: -2.7rem ;}
+}
+@-webkit-keyframes move {
+  from { top: -1.6rem ;}
+  to { top: -2.7rem ;}
+}
+@-moz-keyframes move {
   from { top: -1.6rem ;}
   to { top: -2.7rem ;}
 }

@@ -4,6 +4,14 @@
   color: $text;
   text-align: center;
   cursor: pointer;
+
+  &-watch { 
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+  }
 }
 
 .toggle {
@@ -59,7 +67,9 @@
   z-index: 2;
   color: $dark;
   border-radius: .5rem;
-  animation: appear 3s;
+  animation: blink 4s 2s;
+  -webkit-animation: blink 4s 2s;
+  -moz-animation: blink 4s 2s;
 
   &::before {
     content: '';

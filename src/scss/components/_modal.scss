@@ -35,6 +35,10 @@
       position: absolute;
       left: 2rem;
       top: .5rem;
+
+      &::first-letter {
+        color: $accent;
+      }
     }
   }
 }
