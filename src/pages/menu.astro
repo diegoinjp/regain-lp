@@ -1,10 +1,23 @@
 ---
 import MenuButton from '../components/MenuButton.astro'
+import MenuLinks from '../components/MenuLinks'
+import Modal from '../components/Modal'
 import BaseLayout from '../layouts/BaseLayout.astro'
+
+const menu = ['About', 'Cast', 'Staff', 'Contact']
 ---
 
-<BaseLayout title="メニュー" image="bg-[url('/img/menu.jpg')]">
-  <div>
-    <MenuButton href="/" icon="mdi:close" />
+<BaseLayout title="メニュー" image="bg-[url('/img/menu.jpg')]" position="right">
+  <MenuButton href="/" icon="mdi:close" slot="up" />
+  <!-- <Modal client:only="preact" /> -->
+  <div class="flex gap-10 text-xl self-end flex-col items-end">
+    <MenuLinks client:only="preact" itemList={menu} />
   </div>
+  <div></div>
 </BaseLayout>
+
+<script is:inline>
+  function logme() {
+    console.log('oli', index)
+  }
+</script>

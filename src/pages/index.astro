@@ -5,19 +5,29 @@ import RcIcon from '../components/RcIcon.astro'
 ---
 
 <BaseLayout title="自主制作映画" image="bg-[url('/img/imgb-02.jpg')]">
-  <div class="h-full flex flex-col justify-between w-[30rem]">
-    <MenuButton href="/menu" icon="ci:hamburger" />
-    <div class="flex flex-col gap-4">
-      <h3 class="text-xl">ST Moonlight</h3>
-      <h1 class="text-7xl font-bold">REGAIN</h1>
-      <p class="text-xl">彼女も友達も失った青年が、師匠との奇妙な関係を通して成長し、失くしたものを再び取り戻す物語</p>
-      <p>監督: Diego Vallejo<br />脚本: 野田祐介</p>
-      <a href="https://youtu.be/WYBYF4gMoRk" target="_blank"><div class="bg-hotpink-main hover:bg-hotpink-light w-5/6 text-center py-3">Watch Now</div></a>
-    </div>
-    <div class="flex gap-6">
-      <RcIcon icon="twitter" href="https://twitter.com/STMoonlight3" />
-      <RcIcon icon="instagram" href="https://t.co/Nb0OsT61QS" />
-      <RcIcon icon="youtube" href="https://www.youtube.com/channel/UCeCawv2pH-mKHkOrWaLBAjA" />
-    </div>
+  <!-- <span class="fixed z-10 top-0 left-0 w-full lg:h-screen bg-gradient-to-r from-bg-black to-transparent"></span> -->
+  <MenuButton href="/menu" icon="ci:hamburger" slot="up" />
+  <div class="flex flex-col gap-4 lg:w-[30rem]">
+    <h3 class="text-xl">ST Moonlight</h3>
+    <h1 class="text-8xl font-semibold first-letter:text-hotpink-main">REGAIN</h1>
+    <p class="text-xl">彼女も友達も失った青年が、師匠との奇妙な関係を通して成長し、失くしたものを再び取り戻す物語</p>
+    <p>監督: Diego Vallejo<br />脚本: 野田祐介</p>
+    <a href="https://youtu.be/WYBYF4gMoRk" target="_blank"><div class="bg-hotpink-main hover:bg-hotpink-light lg:w-3/5 text-center py-3">Watch Now</div></a>
+  </div>
+  <div class="flex gap-6" slot="bottom">
+    <RcIcon icon="twitter" href="https://twitter.com/STMoonlight3" />
+    <RcIcon icon="instagram" href="https://t.co/Nb0OsT61QS" />
+    <RcIcon icon="youtube" href="https://www.youtube.com/channel/UCeCawv2pH-mKHkOrWaLBAjA" />
   </div>
 </BaseLayout>
+
+<style>
+  .fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, $background 30%, hsla(0, 0%, 0%, 0) 50%);
+  }
+</style>
