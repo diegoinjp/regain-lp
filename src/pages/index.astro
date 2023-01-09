@@ -1,81 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import BaseLayout from '../layouts/BaseLayout.astro'
+import MenuButton from '../components/MenuButton.astro'
+import RcIcon from '../components/RcIcon.astro'
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+<BaseLayout title="自主制作映画" image="bg-[url('/img/imgb-02.jpg')]">
+  <div class="h-full flex flex-col justify-between w-[30rem]">
+    <MenuButton href="/menu" icon="ci:hamburger" />
+    <div class="flex flex-col gap-4">
+      <h3 class="text-xl">ST Moonlight</h3>
+      <h1 class="text-7xl font-bold">REGAIN</h1>
+      <p class="text-xl">彼女も友達も失った青年が、師匠との奇妙な関係を通して成長し、失くしたものを再び取り戻す物語</p>
+      <p>監督: Diego Vallejo<br />脚本: 野田祐介</p>
+      <a href="https://youtu.be/WYBYF4gMoRk" target="_blank"><div class="bg-hotpink-main hover:bg-hotpink-light w-5/6 text-center py-3">Watch Now</div></a>
+    </div>
+    <div class="flex gap-6">
+      <RcIcon icon="twitter" href="https://twitter.com/STMoonlight3" />
+      <RcIcon icon="instagram" href="https://t.co/Nb0OsT61QS" />
+      <RcIcon icon="youtube" href="https://www.youtube.com/channel/UCeCawv2pH-mKHkOrWaLBAjA" />
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon'
+
+export interface Props {
+  href: string
+  icon: 'ci:hamburger' | 'mdi:close'
+}
+
+const { href, icon } = Astro.props
+---
+
+<a href={href}><div class="w-6 h-6 bg-white z-10"><Icon name={icon} /></div></a>
+
+<style lang="css">
+  [astro-icon] {
+    color: black;
+    /* OR */
+    fill: black;
+  }
+</style>
