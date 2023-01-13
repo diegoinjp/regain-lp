@@ -9,7 +9,7 @@ const menu = ['About', 'Cast', 'Staff', 'Contact']
 
 <BaseLayout title="メニュー" image="bg-[url('/img/menu.jpg')]" position="right">
   <MenuButton href="/" icon="mdi:close" slot="up" />
-  <!-- <Modal client:only="preact" /> -->
+  <Modal client:only="preact" />
   <div class="flex gap-10 text-xl self-end flex-col items-end">
     <MenuLinks client:only="preact" itemList={menu} />
   </div>
