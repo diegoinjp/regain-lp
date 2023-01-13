@@ -1,23 +1,18 @@
 ---
+import Gallery from '../components/Gallery'
 import MenuButton from '../components/MenuButton.astro'
 import MenuLinks from '../components/MenuLinks'
 import Modal from '../components/Modal'
 import BaseLayout from '../layouts/BaseLayout.astro'
-
-const menu = ['About', 'Cast', 'Staff', 'Contact']
+import { cast, Menu } from '../utils/config'
 ---
 
 <BaseLayout title="メニュー" image="bg-[url('/img/menu.jpg')]" position="right">
   <MenuButton href="/" icon="mdi:close" slot="up" />
   <Modal client:only="preact" />
+  <Gallery galleries={cast} client:only="preact" />
   <div class="flex gap-10 text-xl self-end flex-col items-end">
-    <MenuLinks client:only="preact" itemList={menu} />
+    <MenuLinks client:only="preact" itemList={Menu} />
   </div>
   <div></div>
 </BaseLayout>
-
-<script is:inline>
-  function logme() {
-    console.log('oli', index)
-  }
-</script>

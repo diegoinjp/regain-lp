@@ -1,25 +1,30 @@
-import { useState } from 'preact/hooks'
+import { useStore } from '@nanostores/preact'
+import { isModalOpen, modalContent } from '../stores/modalStore'
 
 export interface ModalProps {
   id: number
   title: string
 }
 
-const Modal = ({ id, title }: ModalProps) => {
-  const [open, setOpen] = useState(false)
+const Modal = () => {
+  const $isModalOpen = useStore(isModalOpen)
+  const $modalContent = useStore(modalContent)
+
   const closeModal = () => {
-    setOpen(false)
+    isModalOpen.set(false)
     console.log('closing modal')
   }
   return (
     <>
-      {open && (
-        <div class="fixed w-full h-screen bg-black/40 grid place-items-center" onClick={closeModal}>
-          <div class="bg-hotpink-white p-8 w-[30rem] text-gray-700 text-left flex flex-col gap-3 relative" onClick={(e) => e.stopPropagation()}>
-            <h1 class="text-4xl uppercase font-semibold first-letter:text-hotpink-main">About</h1>
-            <span class="absolute w-5/12 h-1 top-10 right-8 bg-hotpink-main"></span>
-            <span class="absolute w-6/12 h-1 top-14 right-8 bg-gray-700"></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, adipisci iure tempora odit recusandae exercitationem, veniam ducimus soluta explicabo dolor est laborum, doloremque culpa obcaecati. In voluptatibus doloremque odio temporibus.</p>
+      {$isModalOpen && (
+        <div class="fixed w-full h-screen bg-black/50 grid place-items-center z-30 top-0 left-0" onClick={closeModal}>
+          <div class="bg-hotpink-white p-6 lg:p-8 w-5/6 lg:w-[30rem] text-gray-700 text-left flex flex-col gap-3 relative" onClick={(e) => e.stopPropagation()}>
+            <h1 class="text-4xl uppercase font-semibold first-letter:text-hotpink-main">{$modalContent.title}</h1>
+            <span class="absolute w-1/6 lg:w-5/12 h-1 top-8 lg:top-10 right-6 lg:right-8 bg-hotpink-main"></span>
+            <span class="absolute w-1/5 lg:w-6/12 h-1 top-12 lg:top-14 right-6 lg:right-8 bg-gray-700"></span>
+            <div class="max-h-96 overflow-y-scroll">
+              <p>{$modalContent.content}</p>
+            </div>
           </div>
         </div>
       )}
