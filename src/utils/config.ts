@@ -35,7 +35,7 @@ export const cast: ICast[] = [
   },
   {
     name: '佐々木皐介',
-    nameReading: 'Kohki Sano',
+    nameReading: 'Kosuke Sasaki',
     role: '清水啓介',
     roleReading: 'Referee',
     imgUrl: 'bg-[url(/img/img-02.jpg)]',
