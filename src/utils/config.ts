@@ -10,7 +10,7 @@ export const SITE_DESCRIPTION = '自習制作映画'
 export const Menu: ModalContentType[] = [
   {
     title: 'About',
-    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias at earum, unde dolor labore dolorem molestias debitis excepturi molestiae quis minima natus qui fugiat, voluptates hic facilis sed provident ipsa!',
+    content: '学生4人によって結成された映画製作団体「ST.Moonlight」の記念すべき第一作目いよいよ公開!! 彼女も友達も失った青年が、師匠との奇妙な関係を通して成長し、失くしたものを再び取り戻す物語',
   },
   {
     title: 'Cast',
