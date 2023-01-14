@@ -1,0 +1,18 @@
+---
+import Gallery from '../components/Gallery'
+import MenuButton from '../components/MenuButton.astro'
+import MenuLinks from '../components/MenuLinks'
+import Modal from '../components/Modal'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { cast, Menu } from '../utils/config'
+---
+
+<BaseLayout title="メニュー" image="bg-[url('/img/menu.jpg')]" position="right">
+  <MenuButton href="/" icon="mdi:close" />
+  <Modal client:only="preact" />
+  <Gallery galleries={cast} client:only="preact" />
+  <div class="flex gap-10 text-xl self-end flex-col items-end">
+    <MenuLinks client:only="preact" itemList={Menu} />
+  </div>
+  <div></div>
+</BaseLayout>

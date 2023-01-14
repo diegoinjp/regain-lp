@@ -1,0 +1,26 @@
+---
+import { Icon } from 'astro-icon'
+
+export interface IconProps {
+  href: string
+  icon: 'twitter' | 'instagram' | 'youtube'
+}
+
+const { icon, href = '/' } = Astro.props
+---
+
+<a href={href} target="_blank"><div class="w-10 h-10 md:w-6 md:h-6"><Icon name={`mdi:${icon}`} /></div></a>
+
+<style lang="css">
+  [astro-icon] {
+    color: white;
+    /* OR */
+    fill: white;
+  }
+
+  [astro-icon]:hover {
+    color: hsl(335, 100%, 50%);
+    /* OR */
+    fill: hsl(335, 100%, 50%);
+  }
+</style>
