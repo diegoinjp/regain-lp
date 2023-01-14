@@ -9,6 +9,7 @@ import { cast, Menu } from '../utils/config'
 
 <BaseLayout title="メニュー" image="bg-[url('/img/menu.jpg')]" position="right">
   <MenuButton href="/" icon="mdi:close" />
+  <h2 class="text-4xl font-bold first-letter:text-hotpink-main fixed top-4 left-14 md:top-8 md:left-20">REGAIN</h2>
   <Modal client:only="preact" />
   <Gallery galleries={cast} client:only="preact" />
   <div class="flex gap-10 text-xl self-end flex-col items-end">
