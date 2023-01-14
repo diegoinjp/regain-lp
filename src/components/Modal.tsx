@@ -18,7 +18,7 @@ const Modal = () => {
     <>
       {$isModalOpen && (
         <div class="fixed w-full h-screen bg-black/50 grid place-items-center z-30 top-0 left-0" onClick={closeModal}>
-          <div class="bg-hotpink-white p-6 lg:p-8 w-5/6 lg:w-[30rem] text-gray-700 text-left flex flex-col gap-3 relative" onClick={(e) => e.stopPropagation()}>
+          <div class="bg-hotpink-white p-6 md:p-8 w-5/6 md:w-[30rem] text-gray-700 text-left flex flex-col gap-3 relative" onClick={(e) => e.stopPropagation()}>
             <h1 class="text-4xl uppercase font-semibold first-letter:text-hotpink-main">{$modalContent.title}</h1>
             <span class="absolute w-1/6 lg:w-5/12 h-1 top-8 lg:top-10 right-6 lg:right-8 bg-hotpink-main"></span>
             <span class="absolute w-1/5 lg:w-6/12 h-1 top-12 lg:top-14 right-6 lg:right-8 bg-gray-700"></span>

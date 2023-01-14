@@ -1,6 +1,7 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
+import { getRandom } from './function'
 import type { ICast, ModalContentType } from './types'
 
 export const SITE_TITLE = 'REGAIN'
@@ -84,3 +85,13 @@ export const cast: ICast[] = [
     imgUrl: 'bg-[url(/img/img-08.jpg)]',
   },
 ]
+
+/** tailwind skew styles, maximum number is 6 */
+export const skewness: { [key: string]: string } = {
+  1: 'skew-x-3 -skew-y-2',
+  2: 'skew-x-2 skew-y-6',
+  3: '-skew-x-3 skew-y-1',
+  4: 'skew-x-2 -skew-y-3',
+  5: '-skew-x-6 skew-y-6',
+  6: 'skew-x-6 -skew-y-2',
+}

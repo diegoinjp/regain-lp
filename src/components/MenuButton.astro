@@ -9,7 +9,11 @@ export interface Props {
 const { href, icon } = Astro.props
 ---
 
-<a href={href}><div class="w-6 h-6 bg-white z-10"><Icon name={icon} /></div></a>
+<div class="w-6 h-6 bg-white z-10">
+  <a href={href}>
+    <Icon name={icon} />
+  </a>
+</div>
 
 <style lang="css">
   [astro-icon] {
