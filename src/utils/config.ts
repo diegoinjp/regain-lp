@@ -1,7 +1,6 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-import { getRandom } from './function'
 import type { ICast, ModalContentType } from './types'
 
 export const SITE_TITLE = 'REGAIN'
@@ -18,8 +17,7 @@ export const Menu: ModalContentType[] = [
   },
   {
     title: 'Staff',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat dolorem hic pariatur quis mollitia. Molestias facilis nam fugit dolor exercitationem molestiae magnam tempora dolores ullam aspernatur. Iusto voluptate tempore tenetur recusandae asperiores commodi qui adipisci ipsum nulla enim sit sequi doloribus sunt, beatae rerum id cupiditate inventore quod incidunt ullam, placeat neque nesciunt esse. Nisi doloribus aliquid corporis voluptates libero, eaque ab qui saepe accusamus quisquam doloremque repellendus tempore quia fugiat obcaecati vitae, expedita atque eligendi illo repudiandae ipsum autem!',
+    content: '飛せけ打大ヌ載本ヲヨトロ載旧サルト審役をぜ思表ぴふおょ覇写ぐ際章をみフじ演枝ーフちぜ抱張ヲワノケ夜誠ゃら切6得冠みリぱ。実60関動ふね応議べ和43報どンるま護盛田紙ネ利聞メフ学諾タクロユ郎津ーまリれ摘4会旅ホヘ任徹ラわ問資ヨフオ座宿りドぼて証権太津え。動ひみぽ入品べラこ解木互ルスネモ岩教次ぞべっレ健食イタノメ勢真かゃ知意だぞド六芋ヨウラ芸報イ暮口キ無幅48身ル指飲ほう。',
   },
   {
     title: 'Contact',
