@@ -18,7 +18,7 @@ const { title, description, image, position = 'left' } = Astro.props
     <BaseHead title={`${SITE_TITLE} | ${title}`} description={description} />
   </head>
   <body>
-    <main class={`w-full h-screen p-4 md:p-6 lg:p-10 bg-black text-white ${image} bg-no-repeact bg-cover bg-center lg:bg-right`}>
+    <main class={`w-full h-screen p-6 lg:p-10 bg-black text-white ${image} bg-no-repeact bg-cover ${position === 'left' ? 'bg-center' : 'bg-right'} lg:bg-right`}>
       <div class={`h-full flex flex-col overflow-y-scroll justify-between ${position === 'left' ? 'text-left' : 'text-right'}`}>
         <slot />
       </div>
