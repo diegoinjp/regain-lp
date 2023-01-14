@@ -93,3 +93,5 @@ export const skewness: { [key: string]: string } = {
   5: '-skew-x-6 skew-y-6',
   6: 'skew-x-6 -skew-y-2',
 }
+
+export const modalBg = 'fixed w-full h-screen bg-black/50 grid place-items-center z-30 top-0 left-0'
