@@ -28,8 +28,8 @@ function Gallery({ galleries = [] }: { galleries: ICast[] }) {
               return (
                 <div class={`${sBg} ${cast.imgUrl} flex transition-all ${sLarge} ${sSmall}`}>
                   <div className="self-end flex flex-col mb-8 gap-4 relative">
-                    <h2 class={`${sToggleDisplay} ${skewness[getRandom()]} text-5xl p-3 bg-hotpink-main lg:text-7xl font-bold text-shadow-lg text-center z-30`}>{cast.role}</h2>
-                    <h4 class={`${sToggleDisplay} ${skewness[getRandom()]} p-2 text-2xl lg:text-4xl text-shadow-lg font-bold bg-white text-hotpink-main text-center z-30`}>{cast.name}</h4>
+                    <h2 class={`${sToggleDisplay} ${skewness[getRandom()]} text-4xl lg:text-6xl p-3 bg-hotpink-main  font-bold text-shadow-lg text-center z-30`}>{cast.role}</h2>
+                    <h4 class={`${sToggleDisplay} ${skewness[getRandom()]} p-2 text-xl lg:text-3xl text-shadow-lg font-bold bg-white text-hotpink-main text-center z-30`}>{cast.name}</h4>
                   </div>
                 </div>
               )
