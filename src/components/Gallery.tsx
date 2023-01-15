@@ -12,7 +12,7 @@ const sToggleDisplay = 'transition-all group-hover:block hidden'
 function Gallery({ galleries = [] }: { galleries: ICast[] }) {
   const $isGalleryOpen = useStore(isGalleryOpen)
 
-  function closeGallery() {
+  const closeGallery = () => {
     isGalleryOpen.set(false)
   }
 
@@ -20,7 +20,7 @@ function Gallery({ galleries = [] }: { galleries: ICast[] }) {
     <>
       {$isGalleryOpen && (
         <div class={modalBg} onClick={closeGallery}>
-          <div class="w-full h-full md:w-5/6 md:h-5/6 md:border-8 self-center md:border-white flex flex-col md:flex-row relative" onClick={(e) => e.stopPropagation()}>
+          <div class="w-full h-full md:w-5/6 md:h-5/6 border-[10px] self-center border-hotpink-main md:border-white flex flex-col md:flex-row relative" onClick={(e) => e.stopPropagation()}>
             <p className="absolute top-0 right-0 lg:top-8 lg:right-8 bg-hotpink-main font-bold rounded-bl-lg lg:rounded-lg px-4 py-2 cursor-pointer z-20" onClick={closeGallery}>
               &times;
             </p>

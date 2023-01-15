@@ -2,14 +2,22 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import MenuButton from '../components/MenuButton.astro'
 import RcIcon from '../components/RcIcon.astro'
+import type { SUPPORTED_MARKDOWN_FILE_EXTENSIONS } from 'astro/dist/core/constants'
 ---
 
 <BaseLayout title="自主制作映画" image="bg-[url('/img/imgb-02.jpg')]">
   <!-- <span class="fixed z-10 top-0 left-0 w-full lg:h-screen bg-gradient-to-r from-bg-black to-transparent"></span> -->
   <MenuButton href="/menu" icon="ci:hamburger" />
+  <!-- <h2 class="fixed top-4 left-14 md:top-9 md:left-24 p-1 bg-white rounded text-gray-700 opacity-0 z-0 animate-blink">
+    Click Here!
+    <span class="absolute top-2 -left-4 w-0 h-0 border-t-8 border-t-transparent border-r-[16px] border-r-white border-b-8 border-b-transparent"></span>
+  </h2> -->
   <div class="flex flex-col pt-64 md:pt-0 gap-4 lg:w-[30rem]">
     <h3 class="text-xl">ST Moonlight</h3>
-    <h1 class="text-7xl md:text-8xl font-semibold first-letter:text-hotpink-main">REGAIN</h1>
+    <h1 class="text-7xl md:text-8xl font-semibold first-letter:text-hotpink-main relative">
+      REGAIN
+      <span class="absolute w-5 h-5 -top-6 md:-top-4 left-[185px] md:left-[249px] animate-bounce bg-white rounded-full"></span>
+    </h1>
     <p class="text-xl">彼女も友達も失った青年が、師匠との奇妙な関係を通して成長し、失くしたものを再び取り戻す物語</p>
     <p>監督: Diego Vallejo<br />脚本: 野田祐介</p>
     <a href="https://youtu.be/WYBYF4gMoRk" target="_blank"><div class="bg-hotpink-main hover:bg-hotpink-light md:w-3/5 text-center text-lg py-3">Watch Now</div></a>

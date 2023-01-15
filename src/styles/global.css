@@ -9,3 +9,10 @@ body {
   scrollbar-width: none; /* Firefox */
   min-height: -webkit-fill-available;
 }
+
+::-moz-selection {
+  background-color: hsla(335, 100%, 50%, 0.5);
+}
+::selection {
+  background-color: hsla(335, 100%, 50%, 0.5);
+}

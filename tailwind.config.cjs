@@ -13,7 +13,18 @@ module.exports = {
 			},
 			flex: {
         '2': '2 2 0%'
-      }
+      },
+			keyframes: {
+				blink: {
+					'0%': { opacity: '0', zIndex: '0' },
+					'20%': { opacity: '1', zIndex: '20' },
+					'80%': { opacity: '1', zIndex: '20' },
+					'100%': { opacity: '0', zIndex: '0' },
+				}
+			},
+			animation: {
+				'blink': 'blink 4s 2s'
+			}
 		},
 	},
 	plugins: [],
