@@ -4,9 +4,9 @@ import { modalBg, skewness } from '../utils/config'
 import { getRandom } from '../utils/function'
 import type { ICast } from '../utils/types'
 
-const sLarge = 'md:justify-center'
+const sLarge = 'md:justify-center md:bg-center'
 const sSmall = 'justify-start items-center'
-const sBg = 'object-cover bg-no-repeact bg-cover bg-right md:bg-center group grayscale hover:grayscale-0 flex-1 hover:grow-[7]'
+const sBg = 'object-cover bg-no-repeact bg-cover group grayscale hover:grayscale-0 flex-1 hover:grow-[7]'
 const sToggleDisplay = 'transition-all group-hover:block hidden'
 
 function Gallery({ galleries = [] }: { galleries: ICast[] }) {

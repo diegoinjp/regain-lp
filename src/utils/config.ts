@@ -80,7 +80,7 @@ export const cast: ICast[] = [
     nameReading: 'Saya, Marika, Yotsuba',
     role: 'ゆり,かえで,さくら',
     roleReading: 'Yuri, Kaede, Sakura',
-    imgUrl: 'bg-[url(/img/img-08.jpg)]',
+    imgUrl: 'bg-[url(/img/img-09.jpg)] md:bg-[url(/img/img-08.jpg)]',
   },
 ]
 
