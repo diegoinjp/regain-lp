@@ -1,6 +1,6 @@
 export interface ModalContentType {
   title: string
-  content: IStaff[]
+  content: string
 }
 
 export interface ICast {
