@@ -4,8 +4,8 @@ import { modalBg, skewness } from '../utils/config'
 import { getRandom } from '../utils/function'
 import type { ICast } from '../utils/types'
 
-const sLarge = 'md:justify-center md:bg-center'
-const sSmall = 'justify-start items-center'
+const sLarge = 'md:justify-center'
+const sSmall = 'justify-start items-center bg-center'
 const sBg = 'object-cover bg-no-repeact bg-cover group grayscale hover:grayscale-0 flex-1 hover:grow-[7]'
 const sToggleDisplay = 'transition-all group-hover:block hidden'
 
@@ -21,7 +21,7 @@ function Gallery({ galleries = [] }: { galleries: ICast[] }) {
       {$isGalleryOpen && (
         <div class={modalBg} onClick={closeGallery}>
           <div class="w-full h-full md:w-5/6 md:h-5/6 border-[10px] self-center border-hotpink-main md:border-white flex flex-col md:flex-row relative" onClick={(e) => e.stopPropagation()}>
-            <p className="absolute top-0 right-0 lg:top-8 lg:right-8 bg-hotpink-main font-bold rounded-bl-lg lg:rounded-lg px-4 py-2 cursor-pointer z-20" onClick={closeGallery}>
+            <p className="absolute top-0 right-0 lg:top-8 lg:right-8 bg-hotpink-main md:hover:bg-hotpink-light font-bold rounded-bl-lg lg:rounded-lg px-4 py-2 cursor-pointer z-20" onClick={closeGallery}>
               &times;
             </p>
             {galleries.map((cast) => {

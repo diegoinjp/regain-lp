@@ -1,6 +1,6 @@
 export interface ModalContentType {
   title: string
-  content: string
+  content: IStaff[]
 }
 
 export interface ICast {
@@ -9,4 +9,9 @@ export interface ICast {
   role: string
   roleReading: string
   imgUrl: string
+}
+
+export interface IStaff {
+  position: string
+  staff: string[]
 }
