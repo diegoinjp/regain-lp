@@ -33,8 +33,8 @@ function Gallery({ galleries = [] }: { galleries: ICast[] }) {
             </p>
             {galleries.map((cast) => {
               return (
-                <div class={`${sBg} ${cast.imgUrl} flex transition-all ${sLarge} ${sSmall}`} onClick={changeLanguage}>
-                  <div className="relative mb-8 flex flex-col gap-4 self-end">
+                <div class={`${sBg} ${cast.imgUrl} flex transition-all ${sLarge} ${sSmall}`}>
+                  <div className="relative mb-8 flex flex-col gap-4 self-end" onClick={changeLanguage}>
                     <h2 class={`${sToggleDisplay} ${skewness[getRandom()]} text-shadow-lg z-30 bg-hotpink-main p-3  text-center text-4xl font-bold lg:text-6xl`}>{lang === 'JP' ? cast.role : cast.roleReading}</h2>
                     <h4 class={`${sToggleDisplay} ${skewness[getRandom()]} text-shadow-lg z-30 bg-white p-2 text-center text-xl font-bold text-hotpink-main lg:text-3xl`}>{lang === 'JP' ? cast.name : cast.nameReading}</h4>
                   </div>
