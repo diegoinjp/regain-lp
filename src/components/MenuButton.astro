@@ -1,16 +1,16 @@
 ---
-import { Icon } from 'astro-icon'
+  import { Icon } from 'astro-icon'
 
-export interface Props {
-  href: string
-  icon: 'ci:hamburger' | 'mdi:close'
-}
+  export interface Props {
+    href: string
+    icon: 'ci:hamburger' | 'mdi:close'
+  }
 
-const { href, icon } = Astro.props
+  const { href, icon } = Astro.props
 ---
 
 <div class="fixed top-6 left-6 md:top-10 md:left-11 w-6 h-6 bg-white z-10">
-  <a href={href}>
+  <a href={href} rel="prefetch">
     <Icon name={icon} />
   </a>
 </div>
