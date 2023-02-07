@@ -9,7 +9,7 @@ export interface IconProps {
 const { icon, href = '/' } = Astro.props
 ---
 
-<a href={href} target="_blank"><div class="w-10 h-10 md:w-6 md:h-6"><Icon name={`mdi:${icon}`} /></div></a>
+<a href={href} aria-label={icon} target="_blank"><div class="h-10 w-10 md:h-6 md:w-6"><Icon name={`mdi:${icon}`} /></div></a>
 
 <style lang="css">
   [astro-icon] {

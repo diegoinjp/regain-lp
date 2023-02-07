@@ -5,26 +5,26 @@ import RcIcon from '../components/RcIcon.astro'
 import type { SUPPORTED_MARKDOWN_FILE_EXTENSIONS } from 'astro/dist/core/constants'
 ---
 
-<BaseLayout title="自主制作映画" image="bg-[url('https://ik.imagekit.io/dvlljo/img/imgb-02.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674979157199')]">
+<BaseLayout title="自主制作映画" image="bg-[url('https://ik.imagekit.io/dvlljo/img/imgb-02.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674979157199?tr=w-auto')]">
   <!-- <span class="fixed z-10 top-0 left-0 w-full lg:h-screen bg-gradient-to-r from-bg-black to-transparent"></span> -->
   <MenuButton href="/menu" icon="ci:hamburger" />
-  <h2 class="fixed top-5 left-[4.5rem] md:top-9 md:left-24 py-1 px-3 bg-white rounded text-gray-700">
+  <h2 class="fixed top-5 left-[4.5rem] rounded bg-white py-1 px-3 text-gray-700 md:top-9 md:left-24">
     Menu!
-    <span class="absolute top-2 -left-4 w-0 h-0 border-t-8 border-t-transparent border-r-[16px] border-r-white border-b-8 border-b-transparent"></span>
+    <span class="absolute top-2 -left-4 h-0 w-0 border-t-8 border-r-[16px] border-b-8 border-t-transparent border-r-white border-b-transparent"></span>
   </h2>
-  <div class="flex flex-col pt-64 md:pt-0 gap-4 lg:w-[30rem]">
+  <div class="flex flex-col gap-4 pt-64 md:pt-0 lg:w-[30rem]">
     <h3 class="text-xl">ST Moonlight</h3>
-    <h1 class="text-7xl md:text-8xl font-semibold first-letter:text-hotpink-main relative">
+    <h1 class="relative text-7xl font-semibold first-letter:text-hotpink-main md:text-8xl">
       REGAIN
-      <span class="absolute w-5 h-5 -top-6 md:-top-4 left-[185px] md:left-[249px] animate-bounce bg-white rounded-full"></span>
+      <span class="absolute -top-6 left-[185px] h-5 w-5 animate-bounce rounded-full bg-white md:-top-4 md:left-[249px]"></span>
     </h1>
     <p class="text-xl">彼女も友達も失った青年が、師匠との奇妙な関係を通して成長し、失くしたものを再び取り戻す物語</p>
     <p>監督: Diego Vallejo<br />脚本: 野田祐介</p>
-    <a href="https://youtu.be/WYBYF4gMoRk" target="_blank"><div class="bg-hotpink-main hover:bg-hotpink-light md:w-3/5 text-center text-lg py-3">Watch Now</div></a>
-    <div class="border-4 md:absolute md:bottom-8 md:right-8 mt-10 md:mt-0 border-white transition opacity-60 hover:opacity-100">
-      <iframe class="clip-box" width="320" height="215" src="https://www.youtube.com/embed/nr1xBnM3H4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <a href="https://youtu.be/WYBYF4gMoRk" target="_blank"><div class="bg-hotpink-main py-3 text-center text-lg hover:bg-hotpink-light md:w-3/5">Watch Now</div></a>
+    <div class="mt-10 border-4 border-white opacity-60 transition hover:opacity-100 md:absolute md:bottom-8 md:right-8 md:mt-0">
+      <iframe loading="lazy" title="trailer" class="clip-box" width="320" height="215" src="https://www.youtube.com/embed/nr1xBnM3H4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <div class="flex self-center md:self-start gap-6 my-10 md:mt-10 md:mb-0">
+    <div class="my-10 flex gap-6 self-center md:mt-10 md:mb-0 md:self-start">
       <RcIcon icon="twitter" href="https://twitter.com/STMoonlight3" />
       <RcIcon icon="instagram" href="https://t.co/Nb0OsT61QS" />
       <RcIcon icon="youtube" href="https://www.youtube.com/channel/UCeCawv2pH-mKHkOrWaLBAjA" />

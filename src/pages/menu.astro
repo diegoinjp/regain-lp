@@ -7,12 +7,12 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import { cast, Menu } from '../utils/config'
 ---
 
-<BaseLayout title="メニュー" image="bg-[url('https://ik.imagekit.io/dvlljo/img/menu.jpg?ik-sdk-version=javascript-1.4.3')]" position="right">
+<BaseLayout title="メニュー" image="bg-[url('https://ik.imagekit.io/dvlljo/img/menu.jpg?ik-sdk-version=javascript-1.4.3?tr=w-auto')]" position="right">
   <MenuButton href="/" icon="mdi:close" />
-  <h2 class="text-4xl font-bold first-letter:text-hotpink-main fixed top-4 left-14 md:top-8 md:left-20">REGAIN</h2>
-  <Modal client:only="preact" />
-  <Gallery galleries={cast} client:only="preact" />
-  <div class="flex gap-10 text-xl self-end flex-col items-end">
+  <h2 class="fixed top-4 left-14 text-4xl font-bold first-letter:text-hotpink-main md:top-8 md:left-20">REGAIN</h2>
+  <Modal client:load />
+  <Gallery galleries={cast} client:load />
+  <div class="flex flex-col items-end gap-10 self-end text-xl">
     <MenuLinks client:only="preact" itemList={Menu} />
   </div>
   <div></div>

@@ -7,7 +7,7 @@ module.exports = {
       colors: {
         hotpink: {
           main: "hsl(335, 100%, 50%)",
-          light: "hsl(335, 100%, 60%)",
+          light: "hsl(335, 100%, 45%)",
           white: "hsl(0, 100%, 96%)",
         },
       },
